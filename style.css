@@ -1,0 +1,194 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100%;
+    margin: auto;
+    max-width: 1150px;
+}
+
+header{
+    background-color: #000;
+    height: 80px;
+    overflow: hidden;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 42.5px;
+}
+
+header nav{
+    opacity: 0;
+    transform: translateX(150px);
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li{
+    font-weight: bold;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 0.95rem;
+}
+header nav ul li:hover{
+    cursor: pointer;
+    color: #1ed760;
+}
+
+header nav ul li:nth-of-type(3){
+    padding-right: 30px;
+}
+
+header nav ul li.bar{
+    border-left: 1px solid #fff;
+    padding-left: 30px;
+}
+
+header nav ul li.access{
+    opacity: 0.8;
+}
+
+.landing, .download{
+    background-color: #993399;
+    height: 100vh;
+    max-height: 700px;
+}
+
+.landing .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing .content{
+    display: flex;
+    align-items: center;
+}
+
+.landing .content .left{
+    width: 60%;
+}
+
+.landing .content .img{
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    margin-left: 50px;
+}
+
+.landing .subTitle,
+.download .subTitle{
+    margin-bottom: 35px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.landing .content *{
+    color: #fff;
+}
+
+.landing .content .title,
+.download .title{
+    line-height: 70px;
+    letter-spacing: -2px;
+    font-size: 3.65rem;
+    margin-bottom: 40px;
+}
+
+.landing .content .text,
+.download .text{
+    font-size: 1.4rem;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+.landing .content .btn, .download .btn{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 35px;
+    width: 260px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #000;
+    transition: transform .2s ease-in-out;
+}
+
+.landing .content .btn:hover, .download .btn:hover{
+    transform: scale(1.1);
+}
+
+.landing .content .terms{
+    max-width: 90%;
+    font-size: 0.75rem;
+    line-height: 18px;
+    margin-top: 35px;
+}
+
+.landing .content .terms span{
+    text-decoration: underline;
+}
+
+.download{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+    background-color: #2941ab;
+}
+
+.download .container{
+    padding-top: 7.5%;
+}
+
+.download .text{
+    max-width: 50%;
+}
+
+.download .text,
+.download .title,
+.download .subTitle{
+    color: #1ed760;
+}
+
+.download .btn{
+    width: auto;
+    padding: 0 25px;
+    color: #2941ab;
+    border: none;
+    font-weight: bold;
+    background-color: #1ed760;
+}
+
+/*Animações*/
+.navAnimate{animation: slide 0.7s; animation-fill-mode: forwards;animation-delay: 0.4s;}
+
+@keyframes slide{
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
